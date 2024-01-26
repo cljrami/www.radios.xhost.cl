@@ -1,7 +1,5 @@
 ---
-import RadioHome from "../components/RadioHome/RadioHome.astro";
-import Layout from "../layouts/Layout.astro";
-// import Card from "../components/Card.astro";
+//SEO
 import { AstroSeo } from "@astrolib/seo";
 ---
 
@@ -39,6 +37,21 @@ import { AstroSeo } from "@astrolib/seo";
     cardType: "summary_large_image",
   }}
 />
-<Layout title="Home">
-  <RadioHome />
-</Layout>
+
+<html lang="es_ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script
+      src="https://kit.fontawesome.com/acf431a76a.js"
+      crossorigin="anonymous"></script>
+    <script
+      id="sonic_js"
+      data-port="8070"
+      src="https://streaming01.xhost.cl/cp/widgets.js?r=880"></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
