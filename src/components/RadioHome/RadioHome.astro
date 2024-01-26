@@ -1,14 +1,17 @@
 ---
 const {
-  imagen = "https://radios.xhost.cl/radiocurico/assets/imagenes/logo.jpg",
-  id_player = "8062",
-  FaceBook = "",
-  Instagram = "",
+  Logo = "https://radios.xhost.cl/radiocurico/assets/imagenes/logo.jpg",
+  id_player = 8062,
+  Instagram = "https://www.instagram.com/radioscurico/",
+  FaceBook = "https://www.facebook.com/profile.php?id=61551234204960&locale=es_LA",
+  X = "",
   TikTok = "",
   Yotube = "",
-  X = "",
+  Url = "https://radiocurico.cl/",
+
   LogoNAme = "",
-  Extension = "",
+  WhatsappNumber = "https://api.whatsapp.com/send?phone=+56986821966&text=Hola!%20Radio",
+  WhatsAppMensaje = "Hola radio Curicó ",
 } = Astro.props;
 ---
 
@@ -16,32 +19,52 @@ const {
   class="flex items-center flex-col justify-center h-screen bg-gray-100 bg-cover bg-[url('https://image.winudf.com/v2/image1/Y29tLnJhZGlvLnJhZGlvYWxmYV9zY3JlZW5fNV8xNjc1NTAzMTQwXzAzNA/screen-5.jpg?fakeurl=1&type=.jpg')]"
 >
   <div class="flex flex-col container p-10 text-center mx-auto items-center">
+    <!--LOGO-->
     <img
-      src={imagen}
+      src={Logo}
       alt="Responsive Image"
       class="mb-4 mx-auto rounded-full border-4 border-transparent border-l-red-700 border-r-amber-600"
     />
+    <!--PLAYER -->
     <iframe
       class="text-center player"
       src="https://streaming01.xhost.cl/cp/widgets/player/single/?p=8062"
     ></iframe>
   </div>
   <div class="d-flex flex justify-center items-center gap-4 mt-20">
-    <a href="https://"
+    <!--INSTAGRAM-->
+    <a href={Instagram} target="_blank" title=""
       ><i class="fab fa-instagram text-slate-300 overflow-hidden text-[5vmin]"
       ></i></a
     >
-    <a href="https://"
-      ><i class="fab fa-facebook text-slate-300 overflow-hidden text-[5vmin]"
-      ></i></a
-    >
-    <a href="https://"
+    <!--FACEBOOK-->
+    <a href={FaceBook} target="_blank" title=""
+      ><i
+        class="fab
+      fa-facebook
+      text-slate-300
+      overflow-hidden
+      text-[5vmin]"
+      ></i>
+    </a>
+    <!--X-->
+    <!-- <a href="https://"
       ><i class="fab fa-twitter text-slate-300 overflow-hidden text-[5vmin]"
       ></i></a
-    >
-    <a href="https://">
-      <i class="fab fa-whatsapp text-slate-300 overflow-hidden text-[5vmin]"
+    > -->
+    <!--WWW -->
+    <a href="{Url}" target="_blank" title=""
+      ><i class="fas fa-globe text-slate-300 overflow-hidden text-[5vmin]"
       ></i></a
+    >
+    <!--WHATSAPP-->
+    <a
+      href="https://api.whatsapp.com/send?phone={WhatsappNumber}&text={WhatsappNumber}"
+      target="_blank"
+    >
+      <i
+        class="fab fa-whatsapp text-slate-300 overflow-hidden text-[5vmin]"
+        aria-hidden="true"></i></a
     >
   </div>
   <h2 class="lg:text-sm text-center text-gray-200 mt-2">
