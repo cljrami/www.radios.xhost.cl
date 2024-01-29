@@ -1,16 +1,16 @@
 ---
 const {
   Logo = "https://radios.xhost.cl/radiocurico/assets/imagenes/logo.jpg",
-  id_player = 8062,
+  port_player = "8062",
   Instagram = "https://www.instagram.com/radioscurico/",
   FaceBook = "https://www.facebook.com/profile.php?id=61551234204960&locale=es_LA",
   X = "",
   TikTok = "",
   Yotube = "",
-  Url = "https://radiocurico.cl/",
+  Url = "https://www.radiocurico.cl/",
 
   LogoNAme = "",
-  WhatsappNumber = "https://api.whatsapp.com/send?phone=+56986821966&text=Hola!%20Radio",
+  WhatsappNumber = "+56986821966",
   WhatsAppMensaje = "Hola radio Curicó ",
 } = Astro.props;
 ---
@@ -28,10 +28,10 @@ const {
     <!--PLAYER -->
     <iframe
       class="text-center player"
-      src="https://streaming01.xhost.cl/cp/widgets/player/single/?p=8062"
+      src=`https://streaming01.xhost.cl/cp/widgets/player/single/?p=${port_player}`
     ></iframe>
   </div>
-  <div class="d-flex flex justify-center items-center gap-4 mt-20">
+  <div class="d-flex flex justify-center items-center gap-4">
     <!--INSTAGRAM-->
     <a href={Instagram} target="_blank" title=""
       ><i class="fab fa-instagram text-slate-300 overflow-hidden text-[5vmin]"
@@ -53,13 +53,13 @@ const {
       ></i></a
     > -->
     <!--WWW -->
-    <a href="{Url}" target="_blank" title=""
+    <a href=`${Url}` target="_blank" title=""
       ><i class="fas fa-globe text-slate-300 overflow-hidden text-[5vmin]"
       ></i></a
     >
     <!--WHATSAPP-->
     <a
-      href="https://api.whatsapp.com/send?phone={WhatsappNumber}&text={WhatsappNumber}"
+      href=`https://api.whatsapp.com/send?phone={WhatsappNumber}&text=${WhatsAppMensaje}`
       target="_blank"
     >
       <i
@@ -67,7 +67,7 @@ const {
         aria-hidden="true"></i></a
     >
   </div>
-  <h2 class="lg:text-sm text-center text-gray-200 mt-2">
+  <h2 class="lg:text-sm text-center text-gray-200">
     <a href="https://www.xhost.cl" class="link-danger"
       >Powered By Xhost© IT SPA</a
     >
