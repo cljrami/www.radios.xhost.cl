@@ -1,44 +1,12 @@
 ---
 //SEO
-import { AstroSeo } from "@astrolib/seo";
+
+import NavBar from "../components/NavBar/NavBar.astro";
+import Footer from "../components/Footer/Footer.astro";
+import "../../src/Estilos/Global.css";
 ---
 
-<AstroSeo
-  title="Radio Xhost nz<x<zx<z"
-  description="This example uses more of the available config options."
-  canonical="https://www.canonical.ie/"
-  openGraph={{
-    url: "https://www.url.ie/a",
-    title: "Open Graph Title",
-    description: "Open Graph Description",
-    images: [
-      {
-        url: "https://www.example.ie/og-image-01.jpg",
-        width: 800,
-        height: 600,
-        alt: "Og Image Alt",
-        type: "image/jpeg",
-      },
-      {
-        url: "https://www.example.ie/og-image-02.jpg",
-        width: 900,
-        height: 800,
-        alt: "Og Image Alt Second",
-        type: "image/jpeg",
-      },
-      { url: "https://www.example.ie/og-image-03.jpg" },
-      { url: "https://www.example.ie/og-image-04.jpg" },
-    ],
-    site_name: "SiteName",
-  }}
-  twitter={{
-    handle: "@handle",
-    site: "@site",
-    cardType: "summary_large_image",
-  }}
-/>
-
-<html lang="es_ES">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -46,12 +14,14 @@ import { AstroSeo } from "@astrolib/seo";
     <script
       src="https://kit.fontawesome.com/acf431a76a.js"
       crossorigin="anonymous"></script>
-    <script
+    <!-- <script
       id="sonic_js"
       data-port="8070"
-      src="https://streaming01.xhost.cl/cp/widgets.js?r=880"></script>
+      src="https://streaming01.xhost.cl/cp/widgets.js?r=880"></script> -->
   </head>
-  <body>
+  <body class="bg-slate-950">
+    <NavBar />
     <slot />
+    <Footer />
   </body>
 </html>

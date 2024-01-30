@@ -1,13 +1,17 @@
 ---
-import RadioHome from "../components/RadioHome/RadioHome.astro";
 import LayoutBase from "../layouts/LayoutBase.astro";
-// import Card from "../components/Card.astro";
+
+//SLIDER PRINCIPAL
+import "../components/NuestroDirectorio/NuestroDirectorio.css";
+import SliderNuestroDirectorio from "../components/NuestroDirectorio/SliderNuestroDirectorio.jsx";
+import Header from "../components/Header/Header.astro";
+//SEO
 import { AstroSeo } from "@astrolib/seo";
 ---
 
 <AstroSeo
-  title="RADIO Curicó"
-  description="This example uses more of the available config options."
+  title="RADIO Online en Curicó - La Mejor Radio Online De Curicó "
+  description="La Mejor Radio Online De Curicó, te acompaños en todas y no te dejamos sol@. Quédate simpre en laq mejor compañia, estamos en la ciudad, en la plata, en el campo. Visítanos en www.radiocurico.cl"
   canonical="https://www.canonical.ie/"
   openGraph={{
     url: "https://www.url.ie/a",
@@ -40,5 +44,6 @@ import { AstroSeo } from "@astrolib/seo";
   }}
 />
 <LayoutBase title="Home Radio Xhost">
-  <RadioHome />
+  <Header />
+  <SliderNuestroDirectorio client:load />
 </LayoutBase>

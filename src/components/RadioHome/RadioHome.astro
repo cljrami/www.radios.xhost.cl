@@ -1,6 +1,8 @@
 ---
 const {
-  Logo = "https://radios.xhost.cl/radiocurico/assets/imagenes/logo.jpg",
+  RutaLogo = "https://radios.xhost.cl/radiocurico/assets/imagenes/",
+  NombreLogo = "logo",
+  ExtensionLogo = "jpg",
   port_player = "8062",
   Instagram = "https://www.instagram.com/radioscurico/",
   FaceBook = "https://www.facebook.com/profile.php?id=61551234204960&locale=es_LA",
@@ -8,10 +10,11 @@ const {
   TikTok = "",
   Yotube = "",
   Url = "https://www.radiocurico.cl/",
-
-  LogoNAme = "",
   WhatsappNumber = "+56986821966",
   WhatsAppMensaje = "Hola radio Curicó ",
+  //mENSAJE Powered By xhOST
+  MensajeXhost = "Powered By Xhost© IT SPA",
+  UrlSponsor = "",
 } = Astro.props;
 ---
 
@@ -21,8 +24,9 @@ const {
   <div class="flex flex-col container p-10 text-center mx-auto items-center">
     <!--LOGO-->
     <img
-      src={Logo}
-      alt="Responsive Image"
+      src=`${RutaLogo}${NombreLogo}.${ExtensionLogo}`
+      alt="Logo radio Curicó"
+      title="Logo radio Curicó"
       class="mb-4 mx-auto rounded-full border-4 border-transparent border-l-red-700 border-r-amber-600"
     />
     <!--PLAYER -->
@@ -59,7 +63,7 @@ const {
     >
     <!--WHATSAPP-->
     <a
-      href=`https://api.whatsapp.com/send?phone={WhatsappNumber}&text=${WhatsAppMensaje}`
+      href=`https://api.whatsapp.com/send?phone=${WhatsappNumber}&text=${WhatsAppMensaje}`
       target="_blank"
     >
       <i
@@ -68,8 +72,8 @@ const {
     >
   </div>
   <h2 class="lg:text-sm text-center text-gray-200">
-    <a href="https://www.xhost.cl" class="link-danger"
-      >Powered By Xhost© IT SPA</a
+    <a href=`${UrlSponsor}` class="link-danger" target="_blank"
+      >{MensajeXhost}</a
     >
   </h2>
   <style>
