@@ -2,11 +2,13 @@
 //SEO
 
 import NavBar from "../components/NavBar/NavBar.astro";
+import CallToAction from "../components/CallToAction/CallToAction.astro";
 import Footer from "../components/Footer/Footer.astro";
+
 import "../../src/Estilos/Global.css";
 ---
 
-<html lang="es">
+<html lang="ES">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -19,9 +21,10 @@ import "../../src/Estilos/Global.css";
       data-port="8070"
       src="https://streaming01.xhost.cl/cp/widgets.js?r=880"></script> -->
   </head>
-  <body class="bg-slate-950">
+  <body class="bg-slate-900">
     <NavBar />
     <slot />
+    <CallToAction />
     <Footer />
   </body>
 </html>

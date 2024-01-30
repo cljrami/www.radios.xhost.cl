@@ -13,7 +13,7 @@ import {  EffectCoverflow, Keyboard, Navigation } from "swiper/modules";
 const SliderNuestroDirectorio = () => {
   return (
     <div className="p-9">
-      <h2 className="-mb-4 font-bold text-lg/[26px] text-slate-200 ">Planes Xhost Radio</h2> 
+      <h2 className="-mb-5 max-w-[24ch]  text-5xl/[1.1] font-semibold md:text-5xl/[1.1] text-focus-in">Planes Xhost Radio</h2> 
       <>      
       
       <Swiper
@@ -47,7 +47,7 @@ const SliderNuestroDirectorio = () => {
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
         }}
