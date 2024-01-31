@@ -1,0 +1,13 @@
+<!-- LoadingRedirect.astro -->
+<template>
+  <div>
+    <div class="loading-indicator">Cargando...</div>
+  </div>
+</template>
+
+<script>
+  // Redirige a index.html después de 3 segundos
+  setTimeout(() => {
+    window.location.href = "/index.html";
+  }, 3000); // 3000 milisegundos = 3 segundos
+</script>

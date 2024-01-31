@@ -4,6 +4,7 @@
 import NavBar from "../components/NavBar/NavBar.astro";
 import CallToAction from "../components/CallToAction/CallToAction.astro";
 import Footer from "../components/Footer/Footer.astro";
+import Loader from "../components/Loader/Loader.astro";
 
 import "../../src/Estilos/Global.css";
 ---
@@ -22,6 +23,7 @@ import "../../src/Estilos/Global.css";
       src="https://streaming01.xhost.cl/cp/widgets.js?r=880"></script> -->
   </head>
   <body class="bg-slate-900">
+    <Loader />
     <NavBar />
     <slot />
     <CallToAction />
