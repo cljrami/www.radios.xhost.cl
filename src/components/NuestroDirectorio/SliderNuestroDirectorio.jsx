@@ -12,8 +12,8 @@ import {  EffectCoverflow, Keyboard, Navigation } from "swiper/modules";
 
 const SliderNuestroDirectorio = () => {
   return (
-    <div className="p-9">
-      <h2 className="-mb-5 max-w-[24ch]  text-5xl/[1.1] font-semibold md:text-5xl/[1.1] text-focus-in">Planes Xhost Radio</h2> 
+    <div className="p-9 scale-in-center ">
+      <h2 className="max-w-[68ch]  text-3xl/[1.1] mb-5  font-semibold md:text-5xl/[1.1] lg:text-5xl/[1.1] text-focus-in">Planes Xhost Radio</h2> 
       <>      
       
       <Swiper
@@ -53,7 +53,7 @@ const SliderNuestroDirectorio = () => {
         }}
         navigation={true}
         modules={[EffectCoverflow,Keyboard, Navigation]}
-        className="SliderNuestroDirectorio"
+        className="SliderNuestroDirectorio bounce-in-top"
       > 
    
         <SwiperSlide><img src="https://wallpapercosmos.com/w/full/3/7/f/1110343-2365x1571-desktop-hd-surfing-wallpaper-image.jpg"/></SwiperSlide>
